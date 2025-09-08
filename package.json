@@ -1,20 +1,38 @@
 {
   "name": "crawler-bun",
-  "module": "index.ts",
+  "version": "1.0.0",
+  "description": "A TypeScript-based web crawler CLI built with Bun.",
   "type": "module",
-  "private": true,
-  "devDependencies": {
-    "@types/bun": "latest"
+  "module": "index.ts",
+  "main": "index.ts",
+  "bin": {
+    "crawler-bun": "./index.ts"
   },
-  "peerDependencies": {
-    "typescript": "^5"
+  "scripts": {
+    "start": "bun run index.ts",
+    "dev": "bun --watch index.ts",
+    "build": "tsc"
   },
+  "private": false,
+  "license": "MIT",
   "dependencies": {
     "cheerio": "^1.1.2",
-    "crypto": "^1.0.1",
-    "dns": "^0.2.2",
-    "readline": "^1.3.0",
-    "robots-parser": "^3.0.1",
-    "util": "^0.12.5"
-  }
+    "robots-parser": "^3.0.1"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "typescript": "^5.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NalinDalal/crawler-bun.git"
+  },
+  "keywords": [
+    "webcrawler",
+    "bun",
+    "typescript",
+    "cli",
+    "crawler"
+  ],
+  "author": "Nalin Dalal"
 }
